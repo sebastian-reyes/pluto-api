@@ -22,6 +22,9 @@ public class Character implements Serializable {
     @Column(name = "name", length = 85)
     private String character_name;
 
+    @Column(columnDefinition = "TEXT")
+    private String description;
+
     @Column(name = "image")
     private String image_name;
 
