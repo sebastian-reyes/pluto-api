@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 @Table(name = "characters")
@@ -42,6 +43,10 @@ public class Character implements Serializable {
     @JoinColumn(name = "id_species")
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     private Species species;
+
+    @ManyToMany(mappedBy = "characters")
+    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "volume", "characters"})
+    private List<Chapter> chapters;
 
     /**
      *

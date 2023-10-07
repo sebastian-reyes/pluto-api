@@ -20,6 +20,7 @@ public class Status {
 
     @Column(length = 15)
     private String status;
+
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "status", cascade = CascadeType.ALL)
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     private List<Character> characters;

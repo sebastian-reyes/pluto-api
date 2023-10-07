@@ -17,8 +17,10 @@ public class Species {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id_species;
+
     @Column(length = 15)
     private String name_species;
+
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "species", cascade = CascadeType.ALL)
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     private List<Character> characters;

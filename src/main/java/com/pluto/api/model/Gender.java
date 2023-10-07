@@ -20,6 +20,7 @@ public class Gender {
 
     @Column(length = 15)
     private String name_gender;
+
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "gender", cascade = CascadeType.ALL)
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     private List<Character> characters;
