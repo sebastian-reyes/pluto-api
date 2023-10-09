@@ -22,6 +22,6 @@ public class Status {
     private String status;
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "status", cascade = CascadeType.ALL)
-    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "status"})
     private List<Character> characters;
 }

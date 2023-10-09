@@ -22,6 +22,6 @@ public class Species {
     private String name_species;
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "species", cascade = CascadeType.ALL)
-    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "species"})
     private List<Character> characters;
 }

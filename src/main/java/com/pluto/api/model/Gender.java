@@ -22,6 +22,6 @@ public class Gender {
     private String name_gender;
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "gender", cascade = CascadeType.ALL)
-    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "gender"})
     private List<Character> characters;
 }
